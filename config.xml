@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+
+<variable>
+		<name>UIDrivers</name>
+		<value>
+			<array>
+				<value>
+					<parameters>
+						<appPath>/Users/freshdirect/Desktop/UITest/APP_File/FDX-Dev9-v2.app</appPath>
+					</parameters>
+				</value>
+			</array>
+		</value>
+	</variable>	
+
+</config>

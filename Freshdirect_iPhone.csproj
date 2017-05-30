@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30F52FBE-5711-4828-9469-DD572B080919}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FreshdirectPOM</RootNamespace>
+    <AssemblyName>FreshdirectPOM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.UITest">
+      <HintPath>packages\Xamarin.UITest.2.0.5\lib\Xamarin.UITest.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInitializer.cs" />
+    <Compile Include="Tests\AbstractSetUp.cs" />
+    <Compile Include="ObjectRepository.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Pages\CommonFunctions.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\ApplicationPages\LaunchPage.cs" />
+    <Compile Include="Tests\ValidationOfRegistrationPageTest.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\CreateAccountPage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\SettingsPage.cs" />
+    <Compile Include="Tests\ValidationOfLoginPageTest.cs" />
+    <Compile Include="Pages\ApplicationPages\SignInPage.cs" />
+    <Compile Include="Pages\ApplicationPages\HomePage.cs" />
+    <Compile Include="Tests\UIValidationOfHomeTest.cs" />
+    <Compile Include="Tests\ValidateAnonUserTest.cs" />
+    <Compile Include="Tests\ValidateLeftDrawerOfHomePage.cs" />
+    <Compile Include="Pages\ApplicationPages\LeftDrawerPage.cs" />
+    <Compile Include="Tests\AddProductToCartTest.cs" />
+    <Compile Include="Tests\DeliveryTimeTest.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\AlertPopup.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\DeliveryTimePage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\CheckoutPage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\PDPPage.cs" />
+    <Compile Include="Pages\ApplicationPages\PLPPage.cs" />
+    <Compile Include="Tests\VerifyForYouTodayCarouselTest.cs" />
+    <Compile Include="Pages\ApplicationPages\BagPage.cs" />
+    <Compile Include="Tests\ValidateCartTest.cs" />
+    <Compile Include="Pages\ApplicationPages\AddNewPaymentPage.cs" />
+    <Compile Include="Tests\PaymentMethodTest.cs" />
+    <Compile Include="Tests\DeliveryAddressFromCheckoutTest.cs" />
+    <Compile Include="Pages\ApplicationPages\AddressBookPage.cs" />
+    <Compile Include="Tests\ValidatePLPPageTest.cs" />
+    <Compile Include="Tests\OrderPlacementTest.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\OrderPage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Tests\ValidateSearchPageTest.cs" />
+    <Compile Include="Tests\OrderModificationTest.cs" />
+    <Compile Include="Pages\ApplicationPages\OrderPlacedPage.cs" />
+    <Compile Include="Pages\ApplicationPages\ModifyingOrderPage.cs" />
+    <Compile Include="Pages\ApplicationPages\AddNewAddressPage.cs" />
+    <Compile Include="Tests\ValidateCouponProductTest.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\TipPage.cs" />
+    <Compile Include="Tests\ValidateTipTest.cs" />
+    <Compile Include="Pages\ApplicationPages\EditAddressPage.cs" />
+    <Compile Include="Pages\ApplicationPages\PaymentPage.cs" />
+    <Compile Include="Pages\ApplicationPages\AboutAppPage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\EditPaymentPage.cs" />
+    <Compile Include="Pages\ApplicationPages\LegalPage.cs" />
+    <Compile Include="Tests\ValidateMEHelpPageTest.cs" />
+    <Compile Include="Tests\CancelOrderTest.cs" />
+    <Compile Include="Tests\DeliveryAddressFromMESettingsPageTest.cs" />
+    <Compile Include="Tests\ValidatePDPPageTest.cs" />
+    <Compile Include="Tests\VerifyMobileNumberAndDeliveryInstructionTest.cs" />
+    <Compile Include="Pages\ApplicationPages\ReceiptPage.cs" />
+    <Compile Include="Pages\ApplicationPages\EmailPage.cs" />
+    <Compile Include="Tests\ModifyEmailPasswordTest.cs" />
+    <Compile Include="Tests\ValidatePromoCodeOnCheckoutTest.cs" />
+    <Compile Include="Pages\ApplicationPages\ContactUsPage.cs" />
+    <Compile Include="Pages\ApplicationPages\ListPage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\ShopFromOrderPage.cs" />
+    <Compile Include="Tests\PaymentFromMESettingsTest.cs" />
+    <Compile Include="Tests\ValidateListPageTest.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Pages\ApplicationPages\AgeVerificationPage.cs" />
+    <Compile Include="Tests\ValidateNotification&amp;SMSAlertsTest.cs" />
+    <Compile Include="Pages\ApplicationPages\Notifications&amp;SMSAlertsPage.cs" />
+    <Compile Include="Pages\ApplicationPages\PasswordPage.cs" />
+    <Compile Include="Pages\ApplicationPages\FoodSafetyPage.cs" />
+    <Compile Include="Pages\ApplicationPages\FAQPage.cs" />
+    <Compile Include="Pages\ApplicationPages\FreshnessGuaranteePage.cs" />
+    <Compile Include="Tests\ChefTableBenefitsTest.cs" />
+    <Compile Include="Pages\ApplicationPages\MeHelpPage.cs" />
+    <Compile Include="Pages\ApplicationPages\ChefTableBenefitPage.cs" />
+    <Compile Include="Tests\AddressLocatorTest.cs" />
+    <Compile Include="Pages\ApplicationPages\AddressLocatorPage.cs" />
+    <Compile Include="Tests\OrderWDCPlacementTest.cs" />
+    <Compile Include="Tests\ValidateCheckoutTest.cs" />
+
+    <Compile Include="Pages\ApplicationPages\ATPPage.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Tests\DeliveryPassTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Tests\" />
+    <Folder Include="Pages\ApplicationPages\" />
+  </ItemGroup>
+</Project>
